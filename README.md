@@ -13,7 +13,7 @@ Welcome to our E-Commerce website project! This application is designed to provi
   
 **Installation**
 
-- Clone the repository: git clone https://github.com/yourusername/ecommerce-website.git
+- Clone the repository: git clone https://github.com/Rita-Oyeyiola/ecommerce-application.git
 - Navigate to the project directory: cd ecommerce-website
 - Install dependencies: npm install
 - Set up the backend server and database.
@@ -36,16 +36,20 @@ Features
 
   
 **Technologies Used**
+
 Frontend: React, HTML, CSS, JavaScript
 Backend: Springboot.
 
 **Contributing**
+
 We welcome contributions! Please follow our Contribution Guidelines.
 
 **License**
+
 This project is licensed under the MIT License.
 
 **Acknowledgments**
+
 Special thanks to contributors who participated in this project.
 Contact
 For any inquiries, please contact us at oyeyiolarita221@gmail.com.
