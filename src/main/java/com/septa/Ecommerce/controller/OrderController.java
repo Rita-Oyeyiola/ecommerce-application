@@ -1,12 +1,11 @@
-package com.septa.Ecommerce.Controller;
+package com.septa.Ecommerce.controller;
 
 import com.septa.Ecommerce.dto.OrderDTO;
-import com.septa.Ecommerce.dto.ProductDTO;
 import com.septa.Ecommerce.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/order")
+@RequestMapping(value = "/api/orders")
 public class OrderController {
 
     private final OrderService orderService;
@@ -15,15 +14,15 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    @PostMapping("/create")
+    @PostMapping("")
     public Object CreateOrder (OrderDTO orderDTO){
         return orderService.CreateOrder(orderDTO);
     }
 
-    @GetMapping("/get")
+    @GetMapping("")
     public Object GetAllProduct() {return orderService.GetAllOrder();}
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
     public Object GetProductById(@PathVariable Long id)
     {return orderService.GetOrderById(id);}
 

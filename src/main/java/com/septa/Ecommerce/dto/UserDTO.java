@@ -2,11 +2,7 @@ package com.septa.Ecommerce.dto;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name = "customers")
-public class CustomerDTO {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class UserDTO {
 
     private String name;
 
@@ -14,10 +10,10 @@ public class CustomerDTO {
 
     private Long phoneNumber;
 
-    public CustomerDTO() {
+    public UserDTO() {
     }
 
-    public CustomerDTO( String name, String email, Long phoneNumber) {
+    public UserDTO(String name, String email, Long phoneNumber) {
 
         this.name = name;
         this.email = email;

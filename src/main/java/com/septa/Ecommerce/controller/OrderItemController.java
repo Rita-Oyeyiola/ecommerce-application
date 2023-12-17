@@ -1,6 +1,5 @@
-package com.septa.Ecommerce.Controller;
+package com.septa.Ecommerce.controller;
 
-import com.septa.Ecommerce.model.Customer;
 import com.septa.Ecommerce.model.OrderItem;
 import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.http.HttpStatus;
@@ -8,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.web.bind.annotation.*;
 import com.septa.Ecommerce.service.OrderItemService;
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/order-items")

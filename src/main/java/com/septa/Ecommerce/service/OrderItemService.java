@@ -1,6 +1,5 @@
 package com.septa.Ecommerce.service;
 
-import com.septa.Ecommerce.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.septa.Ecommerce.model.OrderItem;
