@@ -4,7 +4,6 @@ import com.septa.Ecommerce.dto.OrderDTO;
 import com.septa.Ecommerce.model.Order;
 import com.septa.Ecommerce.repository.OrderRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 @Service
 public class OrderService {
@@ -15,16 +14,15 @@ public class OrderService {
             this.orderRepository = orderRepository;
         }
 
-        public Object CreateOrder (OrderDTO orderDTO){
+        public Object createOrder(OrderDTO orderDTO){
             Order order = new Order();
-
+            // todo: some sort of validation need to be done her in order to make sure the right data is being persisted
             order.setTotalAmount(orderDTO.getTotalAmount());
             //order.setOrderItems(orderDTO.getOrderItems());
-
             return orderRepository.save(order);
         }
 
-        public Object GetAllOrder() {return orderRepository.findAll();}
+        public Object getAllOrder() {return orderRepository.findAll();}
 
-        public Object GetOrderById(Long id) {return orderRepository.findById(id);}
+        public Object getOrderById(Long id) {return orderRepository.findById(id);}
 }

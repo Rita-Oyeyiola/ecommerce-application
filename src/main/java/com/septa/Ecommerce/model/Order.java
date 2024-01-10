@@ -8,22 +8,22 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
+@Table(name = "orders")
 public class Order {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private long id;
+    private long id;
 
-   private long customerId;
+    private long customerId;
 
-   @CreationTimestamp
-   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-   private LocalDateTime orderDate;
+    @CreationTimestamp
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime orderDate;
 
-   private double totalAmount;
+    private double totalAmount;
 
-   @OneToMany(mappedBy = "order")
-   private List<OrderItem> orderItems;
+    @OneToMany(mappedBy = "order")
+    private List<OrderItem> orderItems;
 
     public Order() {
     }
