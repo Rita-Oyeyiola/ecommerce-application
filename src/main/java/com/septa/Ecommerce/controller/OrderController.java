@@ -15,16 +15,16 @@ public class OrderController {
     }
 
     @PostMapping("")
-    public Object CreateOrder (OrderDTO orderDTO){
-        return orderService.CreateOrder(orderDTO);
+    public Object createOrder (OrderDTO orderDTO){
+        return orderService.createOrder(orderDTO);
     }
 
     @GetMapping("")
-    public Object GetAllProduct() {return orderService.GetAllOrder();}
+    public Object getAllProduct() {return orderService.getAllOrder();}
 
     @GetMapping("/{id}")
-    public Object GetProductById(@PathVariable Long id)
-    {return orderService.GetOrderById(id);}
+    public Object getProductById(@PathVariable Long id)
+    {return orderService.getOrderById(id);}
 
 
 

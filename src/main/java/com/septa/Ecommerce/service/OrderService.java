@@ -15,7 +15,7 @@ public class OrderService {
             this.orderRepository = orderRepository;
         }
 
-        public Object CreateOrder (OrderDTO orderDTO){
+        public Object createOrder (OrderDTO orderDTO){
             Order order = new Order();
 
             order.setTotalAmount(orderDTO.getTotalAmount());
@@ -24,7 +24,7 @@ public class OrderService {
             return orderRepository.save(order);
         }
 
-        public Object GetAllOrder() {return orderRepository.findAll();}
+        public Object getAllOrder() {return orderRepository.findAll();}
 
-        public Object GetOrderById(Long id) {return orderRepository.findById(id);}
+        public Object getOrderById(Long id) {return orderRepository.findById(id);}
 }

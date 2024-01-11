@@ -3,17 +3,18 @@ package com.septa.Ecommerce.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table (name = "order-items")
 public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne(cascade = CascadeType.ALL, targetEntity = Order.class, fetch = FetchType.EAGER)
-    @JoinColumn(name = "order_id", insertable = false, updatable = false)
+    @ManyToOne
+    @JoinColumn(name = "order_id")
     private Order order;
 
-    @ManyToOne(cascade = CascadeType.ALL, targetEntity = Product.class, fetch = FetchType.EAGER)
-    @JoinColumn(name = "product_id", insertable = false, updatable = false)
+    @ManyToOne
+    @JoinColumn(name = "product_id")
     private Product product;
 
     private int quantity;

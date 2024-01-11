@@ -1,15 +1,15 @@
 package com.septa.Ecommerce.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
-
+@Table (name = "product")
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    private long id;
+
     private String name;
 
     private String description;
@@ -21,13 +21,21 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, String description, int price, int stockQuantity) {
+    public Product(Long id, String name, String description, int price, int stockQuantity) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.stockQuantity = stockQuantity;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
     public String getName() {
         return name;
     }
